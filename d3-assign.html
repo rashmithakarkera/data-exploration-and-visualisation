@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Deaths per state</title>
+</head>
+
+    <style>
+        * {
+            font-family: "Times New Roman", "Book Antiqua", Palatino, serif
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #444444;
+            font-weight: 100;
+        }
+        .container {
+            background-color: #0defe03d;
+            margin: 0px;
+        }
+        path {
+            stroke: black;
+            stroke-width: 0.25px;
+            fill: #808080;
+        }
+        .details {
+            top: 0px;
+            visibility: hidden;
+            width: 300px;
+            padding: 30px;
+            height: 1000%;
+            opacity: 0.4;
+            position: absolute;
+            background-color: aliceblue;
+            font-size: 50px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+<body>
+       <h1> Deaths as per self-intentional harm in Australia 2009-2018 <br/>                
+                   <select id="dropdown" onchange="onChange()">
+            <option value="2009" >2009</option>
+            <option value="2010">2010</option>
+            <option value="2011" >2011</option>
+            <option value="2012">2012</option>
+             <option value="2013" >2013</option>
+            <option value="2014">2014</option>
+             <option value="2015" >2015</option>
+            <option value="2016">2016</option>
+             <option value="2017" >2017</option>
+            <option value="2018">2018</option>
+        </select>
+    </h1>
+
+  <div class="details">
+        <p class="data"></p>
+        <p class="value"></p>
+    </div>
+    
+    <div class="container">
+
+  <svg></svg>
+</div>
+    <footer class="center">
+        source: <b>https://github.com/simaQ/maps-data/blob/master/Australia-states.geo.json</b>  &copy;<br/>
+        <b>https://github.com/viswesh/Maps/tree/master/chapter1/src/js</b> &copy; <br/>
+        <b>https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/3302.02018?OpenDocument</b> &copy;
+      
+</footer>
+
+    
+
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+  <script type="text/javascript" src="d3-assign.js"> </script>
+    
+    <script type="text/javascript">
+                window.onload = function(){
+                    initialize();
+                
+                };
+                
+    </script>
+    
+</body>
+</html>
